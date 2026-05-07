@@ -25,8 +25,7 @@ modules:
         destination: /
 
   - type: chezmoi
-    repository: https://codeberg.org/lotsaspaghetti/dotfiles.git
-    branch: chezmoi
+    repository: ssh://git@codeberg.org/lotsaspaghetti/dotfiles.git
     all-users: false
     file-conflict-policy: skip
 
