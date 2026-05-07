@@ -1,5 +1,9 @@
 # bazzite-dx-lotsaspaghetti &nbsp; [![bluebuild build badge](https://github.com/lotsospaghetti/bazzite-dx-lotsaspaghetti/actions/workflows/build.yml/badge.svg)](https://github.com/lotsospaghetti/bazzite-dx-lotsaspaghetti/actions/workflows/build.yml)
 
+A personal `bazzite-dx:stable` image that makes some minor tweaks, such as replacing VSCode with Zed, adding the `/nix` folder, and applying my [dotfiles](https://codeberg.org/lotsaspaghetti/dotfiles) using chezmoi.
+
+## Original README
+
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
 After setup, it is recommended you update this README to describe your custom image.
