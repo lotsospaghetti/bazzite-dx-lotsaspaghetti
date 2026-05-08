@@ -6,6 +6,7 @@ install-brew-packages:
     brew bundle --file=/usr/share/ublue-os/homebrew/spaghetti.Brewfile
 
 alias configure-nix := configure-determinate-nix
+
 NIX_INSTALLER := "/nix/nix-installer"
 NIX_RECEIPT := "/nix/receipt.json"
 
@@ -39,7 +40,7 @@ configure-determinate-nix ACTION="":
     if [[ -z $ACTION ]]; then
         echo -e "Nix status: ${bold}${install_status}${normal}\n"
         echo "What would you like to do?"
-        if [[ $install_status =~ "^[Nn]ot.*" ]]; then
+        if [[ $install_status =~ ^[Nn]ot.* ]]; then
             CHOICE=$(ugum choose \
                     "Begin install" \
                     "Exit without changes")
@@ -87,7 +88,7 @@ nix-installer:
     #!/usr/bin/bash
     NIX_INSTALLER="{{ NIX_INSTALLER }}"
     if [[ -x $NIX_INSTALLER ]]; then
-        sh -c "$NIX_INSTALLER $@"
+        sh -c "$NIX_INSTALLER" "$@"
     else
         echo "Nix is not installed, please run 'ujust configure-determinate-nix install' first." >&2
         exit 1
