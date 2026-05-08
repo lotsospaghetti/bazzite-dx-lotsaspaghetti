@@ -1,0 +1,6 @@
+brew "ansible"
+brew "ffmpeg"
+brew "yt-dlp"
+brew "shellcheck"
+brew "skopeo"
+brew "tealdeer"
