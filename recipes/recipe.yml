@@ -30,6 +30,7 @@ modules:
   - type: chezmoi
     repository: ssh://git@codeberg.org/lotsaspaghetti/dotfiles.git
     all-users: false
+    disable-update: true
     file-conflict-policy: skip
 
   - type: script
