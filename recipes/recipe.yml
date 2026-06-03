@@ -7,6 +7,11 @@ base-image: ghcr.io/ublue-os/bazzite-dx
 image-version: stable
 
 modules:
+  - type: akmods
+    base: bazzite
+    install:
+      - zfs
+
   - type: script
     snippets:
       - "echo 'Enable Terra repo' && sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/terra.repo"
@@ -37,5 +42,30 @@ modules:
     snippets:
       - "echo 'Disable Terra repo' && sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/terra.repo"
       - "echo 'Add persistent /nix directory' && mkdir /nix"
+
+  - type: default-flatpaks
+    configurations:
+      - scope: system
+        notify: true
+        repo:
+          title: flathub
+        install:
+          - io.gitlab.librewolf-community
+          - io.github.ungoogled_software.ungoogled_chromium
+          - com.bitwarden.desktop
+          - com.github.tchx84.Flatseal
+          - io.github.flattool.Warehouse
+          - io.github.DenysMb.Kontainer
+          - com.heroicgameslauncher.hgl
+          - page.kramo.Cartridges
+          - com.github.mtkennerly.ludusavi
+          - io.github.hedge_dev.hedgemodmanager
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - AtkinsonHyperlegibleMono
+      google-fonts:
+        - Atkinson Hyperlegible Next
 
   - type: signing
