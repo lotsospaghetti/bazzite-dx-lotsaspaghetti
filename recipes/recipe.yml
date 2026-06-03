@@ -8,7 +8,7 @@ image-version: stable
 
 modules:
   - type: akmods
-    base: bazzite
+    base: ogc
     install:
       - zfs
 
