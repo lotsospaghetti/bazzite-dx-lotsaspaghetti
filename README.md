@@ -1,12 +1,14 @@
 # bazzite-dx-lotsaspaghetti &nbsp; [![bluebuild build badge](https://github.com/lotsospaghetti/bazzite-dx-lotsaspaghetti/actions/workflows/build.yml/badge.svg)](https://github.com/lotsospaghetti/bazzite-dx-lotsaspaghetti/actions/workflows/build.yml)
 
-A personal `bazzite-dx:stable` image that makes some minor tweaks, such as replacing VSCode with Zed, adding the `/nix` folder, and applying my [dotfiles](https://codeberg.org/lotsaspaghetti/dotfiles) using chezmoi.
+A personal and experimental `bazzite-dx:stable` image that I use to install new system-level software and setup some preconfigured preferences such as my [dotfiles](https://codeberg.org/lotsaspaghetti/dotfiles). This goes without saying, but this image has **zero support** and I do not recommend using it directly. This repo uses [BlueBuild](https://blue-build.org/) and below is a list of major changes I try to keep updated, so anything others might be interested in should be easy to implement in other custom images.
 
-## Original README
+## Modifications
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
-
-After setup, it is recommended you update this README to describe your custom image.
+- [Zed](https://zed.dev/) replaces VSCode as the system's primary code editor
+- [Niri](https://github.com/niri-wm/niri) is available as an additional desktop session
+  - *Planned change: Niri as the *only* desktop session, which would involve changing the image base to `bazzite-dx-gnome:stable` since GNOME is easier to completely remove*
+- Nix support: Provides a `/nix` directory and a [justfile](files/justfiles/determinate-nix.just) for installing and managing [Determinate Nix](https://github.com/DeterminateSystems/nix-installer)
+- Experimental [Winboat](https://winboat.app) support
 
 ## Installation
 

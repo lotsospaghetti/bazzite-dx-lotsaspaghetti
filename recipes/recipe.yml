@@ -20,9 +20,10 @@ modules:
         - xwayland-satellite
         - cliphist
         - wlsunset
-        - matugen # TODO: ujust script for CLI (https://iniox.github.io/#matugen/usage)
         - cava
         - gpu-screen-recorder
+        - freerdp
+        - https://github.com/TibixDev/winboat/releases/download/v0.9.0/winboat-0.9.0-x86_64.rpm
       exclude:
         - alacritty
         - xdg-desktop-portal-*
