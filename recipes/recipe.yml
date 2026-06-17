@@ -23,6 +23,7 @@ modules:
         - cava
         - gpu-screen-recorder
         - freerdp
+        - podman-compose
         - https://github.com/TibixDev/winboat/releases/download/v0.9.0/winboat-0.9.0-x86_64.rpm
       exclude:
         - alacritty
