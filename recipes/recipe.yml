@@ -3,10 +3,8 @@
 name: bazzite-dx-lotsaspaghetti
 description: This is my personal OS image.
 
-# at some point I might switch to bazzite-dx-gnome to daily drive niri
-# (gnome stuff is *much* simpler to uninstall than KDE)
-base-image: ghcr.io/ublue-os/bazzite-dx
-image-version: stable
+base-image: ghcr.io/bazzirco/bazzirco-dx
+image-version: latest
 
 modules:
   - type: script
@@ -16,18 +14,9 @@ modules:
     install:
       packages:
         - zed
-        - niri
-        - xwayland-satellite
-        - cliphist
-        - wlsunset
-        - cava
-        - gpu-screen-recorder
         - freerdp
         - podman-compose
         - https://github.com/TibixDev/winboat/releases/download/v0.9.0/winboat-0.9.0-x86_64.rpm
-      exclude:
-        - alacritty
-        - xdg-desktop-portal-*
     remove:
       auto-remove: true
       packages:
