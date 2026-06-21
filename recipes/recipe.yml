@@ -3,8 +3,8 @@
 name: bazzite-dx-lotsaspaghetti
 description: This is my personal OS image.
 
-base-image: ghcr.io/bazzirco/bazzirco-dx
-image-version: latest
+base-image: ghcr.io/ublue-os/bazzite-dx
+image-version: stable
 
 modules:
   - type: script
@@ -14,6 +14,11 @@ modules:
     install:
       packages:
         - zed
+        - niri
+        - noctalia-shell
+        - cliphist
+        - wlsunset
+        - matugen
         - freerdp
         - podman-compose
         - https://github.com/TibixDev/winboat/releases/download/v0.9.0/winboat-0.9.0-x86_64.rpm
