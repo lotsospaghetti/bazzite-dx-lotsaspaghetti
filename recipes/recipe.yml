@@ -45,6 +45,7 @@ modules:
     snippets:
       - "echo 'Disable Terra repo' && sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/terra.repo"
       - "echo 'Add persistent /nix directory' && mkdir /nix"
+      - "echo 'Remove leftover VSCode config' && $(rm -rf /etc/skel/.config/Code || true)"
 
   - type: default-flatpaks
     configurations:
