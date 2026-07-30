@@ -5,9 +5,9 @@ A personal and experimental `bazzite-dx:stable` image that I use to install new 
 ## Modifications
 
 - [Zed](https://zed.dev/) replaces VSCode as the system's primary code editor
-- [Niri](https://github.com/niri-wm/niri) and [Noctalia shell](https://noctalia.dev/) installed and available as an additional desktop session
 - Nix support: Provides a `/nix` directory and a [justfile](files/justfiles/determinate-nix.just) for installing and managing [Determinate Nix](https://github.com/DeterminateSystems/nix-installer)
 - Experimental [Winboat](https://winboat.app) support
+- Remove Bold Brew setup script and desktop entry
 
 ## Installation
 

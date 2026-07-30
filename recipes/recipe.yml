@@ -14,11 +14,6 @@ modules:
     install:
       packages:
         - zed
-        - niri
-        - noctalia-shell
-        - cliphist
-        - wlsunset
-        - matugen
         - freerdp
         - podman-compose
         - https://github.com/TibixDev/winboat/releases/download/v0.9.0/winboat-0.9.0-x86_64.rpm
@@ -43,9 +38,11 @@ modules:
 
   - type: script
     snippets:
-      - "echo 'Disable Terra repo' && sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/terra.repo"
       - "echo 'Add persistent /nix directory' && mkdir /nix"
       - "echo 'Remove leftover VSCode config' && $(rm -rf /etc/skel/.config/Code || true)"
+      - "echo 'Remove leftover VSCode repository' && $(rm -f /etc/yum.repos.d/vscode.repo || true)"
+      - "echo 'Remove Bold Brew script' && $(rm -f /usr/bin/bbrew-helper || true)"
+      - "echo 'Remove Bold Brew desktop entry' && $(rm -f /usr/share/applications/bbrew.desktop || true)"
 
   - type: default-flatpaks
     configurations:
